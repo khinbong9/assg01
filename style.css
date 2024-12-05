@@ -1,0 +1,408 @@
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: lightskyblue;
+}
+
+/* Main Section Styles */
+main #intro {
+    background-image: url('images/pentagon.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+main #intro h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: black;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+main img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding-top: 100px;
+    background-color: whitesmoke;
+    color: #333;
+}
+
+
+/* Discography Section */
+#discography {
+    margin-top: 40px;
+}
+
+.album-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.album {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.album img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.album-name {
+    background-color: #333;
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for showing the text */
+    z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.album:hover img {
+    transform: scale(1.1);
+}
+
+.album:hover .album-name {
+    opacity: 1;
+}
+
+/* Members */
+#members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.member {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 80%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.member-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-member {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Shop */
+#store-nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#store-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#store-nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#store-nav a {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#store-nav a:hover {
+    background-color: #e74c3c;
+}
+
+/* Concert Tickets Section */
+#concert-tickets {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.ticket {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket:hover {
+    transform: translateY(-5px);
+}
+
+.ticket img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.ticket-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.ticket-date, .ticket-location {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.ticket-price {
+    font-size: 1.2em;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buy-ticket-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.buy-ticket-button:hover {
+    background-color: #2980b9;
+}
+
+/* Merchandise Section */
+#merchandise {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.merch {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    max-width: 300px;
+}
+
+.merch:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.merch img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.merch-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+.merch-price {
+    font-size: 1.1em;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* contact */
+
+.contact-info {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+footer nav a {
+    margin: 0 10px;
+}
+
+footer nav a:hover {
+    color: lightblue;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main h2 {
+        font-size: 1.8em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+}
+
+
+
+#promo-code {
+    margin-top: 20px;
+  }
+  
+  #promo-input {
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  #apply-promo {
+    padding: 8px 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #promo-message {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
